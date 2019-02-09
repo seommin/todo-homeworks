@@ -48,6 +48,7 @@ export default {
 };
 </script>
 
+
 <style scoped>
 ul {
   list-style-type: none;
@@ -70,17 +71,11 @@ li {
   color: #62acde;
   margin-right: 5px;
 }
-.checkBtnCompleted {
-  color: #b3adad;
-}
-.textCompleted {
-  text-decoration: line-through;
-  color: #b3adad;
-}
 .removeBtn {
   margin-left: auto;
   color: #de4343;
 }
+
 .list-enter-active,
 .list-leave-active {
   transition: all 1s;
