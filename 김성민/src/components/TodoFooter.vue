@@ -1,14 +1,20 @@
 <template>
   <div class="clearAllContainer">
-    <span class="clearAllBtn" @click="clearTodo">Clear All</span>
+    <span class="clearAllBtn" @click="clearAll">
+      <slot name="text"></slot>
+      <slot name="icon"></slot>
+    </span>
   </div>
 </template>
 
 <script>
+import { bus } from "../utils/bus.js";
+
 export default {
   methods: {
-    clearTodo: function() {
-      localStorage.clear();
+    clearAll: function() {
+      // 이벤트 버스로 이벤트 보내기
+      this.$emit("clear");
     }
   }
 };
